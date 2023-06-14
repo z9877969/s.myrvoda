@@ -1,0 +1,16 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  /* height: 80px; */
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: var(--bg-dark-color);
+  /* color: #eee; */
+  /* overflow: hidden; */
+}
+
+.logo {
+  padding-bottom: 179px;
+}

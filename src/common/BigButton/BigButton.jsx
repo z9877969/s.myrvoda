@@ -1,0 +1,69 @@
+/** @jsxImportSource @emotion/react */
+
+import PropTypes from "prop-types";
+
+const btnStyles = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "16px 28px",
+  //   backgroundColor: "#223E7F",
+  border: "none",
+  cursor: "pointer",
+  borderRadius: "5px",
+  //   fontSize: "16px",
+  //   lineHeight: "24px",
+  transition: "all 200ms",
+  "&:not(:disabled):hover": {
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.25)",
+  },
+  "&:disabled": {
+    backgroundColor: "#FFE0B2",
+    cursor: "not-allowed",
+  },
+  "& .image": {
+    marginRight: 10,
+  },
+  "& .heading": {
+    fontWeight: 600,
+  },
+};
+
+const defineStyles = (isGray) => ({
+  ...btnStyles,
+  backgroundColor: isGray ? "#EBF3FF" : "#223E7F",
+  color: isGray ? "#012756" : "#FCFCFC",
+  fontSize: isGray ? "14px" : "16px",
+  lineHeight: isGray ? "20px" : "24px",
+  width: isGray ? "182px" : "201px",
+  heigth: isGray ? "54px" : "56px",
+});
+
+const BigButton = (props) => {
+  const {
+    text,
+    onClick = () => {},
+    type = "button",
+    disabled = false,
+    // isGray = true,
+    isGray = false,
+  } = props;
+
+  const finalStyles = defineStyles(isGray);
+
+  return (
+    <button css={finalStyles} type={type} onClick={onClick} disabled={disabled}>
+      <span className="heading">{text}</span>
+    </button>
+  );
+};
+
+BigButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
+  isGray: PropTypes.bool,
+};
+
+export default BigButton;

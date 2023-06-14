@@ -1,0 +1,107 @@
+.heroContent {
+  padding: 122px 96px 0 96px;
+}
+
+.head {
+  color: #223e7f;
+
+  font-family: 'Gilroy';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+}
+
+.head::before {
+  padding-right: 5px;
+  content: url('../../../images/Ellipse.svg');
+}
+
+.tagline {
+  padding-top: 30px;
+  width: 530px;
+  height: 162px;
+  text-transform: uppercase;
+  color: #012756;
+  font-family: 'Ruberoid';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 0.24px;
+}
+
+.description {
+  padding-bottom: 20px;
+  width: 530px;
+  height: 135px;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+  color: #223e7f;
+}
+
+.nav {
+  display: flex;
+  padding-bottom: 50px;
+  gap: 60px;
+}
+
+.serviceLink {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+
+  color: #223e7f;
+}
+
+.serviceLink::after {
+  padding-left: 10px;
+  content: url('../../../images/arrow-right.svg');
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+}
+
+.top {
+  width: 157px;
+  height: 60px;
+  font-family: 'Ruberoid';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 60px;
+  display: flex;
+  /* align-items: center; */
+  letter-spacing: 0.24px;
+  color: #223e7f;
+}
+
+.bot {
+  display: flex;
+  width: 157px;
+  height: 48px;
+  text-align: top;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+
+  color: #223e7f;
+}

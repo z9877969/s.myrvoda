@@ -1,0 +1,43 @@
+.block {
+  display: flex;
+  /* padding-top: 24px;
+  padding-right: 96px;
+  padding-left: 96px; */
+  padding: 24px 96px 0 96px;
+}
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1222px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.list {
+  display: flex;
+}
+
+.phone {
+  display: block;
+}
+
+.phone::before {
+  content: url(' ../../images/phone.svg ');
+}
+
+.mail::before {
+  content: url('../../images/mail.svg');
+}
+
+.language {
+  display: flex;
+  letter-spacing: 0.24px;
+}
+
+.language:first-child {
+  background-color: aqua;
+}

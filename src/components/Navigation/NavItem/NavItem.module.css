@@ -1,0 +1,36 @@
+.NavItem {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  color: var(--sidebar-text-color);
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.NavItem:hover {
+  min-width: 100%;
+}
+
+.NavItem .itemName {
+  margin-left: 24px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.24px;
+  text-decoration: none;
+  color: var(--sidebar-text-color);
+}
+
+.NavItem.NavItemActive > .itemName {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.NavItem.NavItemActive > .itemName::before {
+  padding-right: 5px;
+  content: ' \2022 ';
+  color: var(--accent-color);
+  width: 6px;
+  height: 6px;
+}
