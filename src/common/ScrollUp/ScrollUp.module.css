@@ -1,0 +1,25 @@
+.scroll {
+  position: absolute;
+  /* position: fixed; */
+  /* display: none; */
+  bottom: 195px;
+  right: 96px;
+  z-index: 30;
+  border-radius: 50%;
+
+  line-height: 30px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.scroll:hover {
+  box-shadow: 0 1px 8px 3px rgba(165, 165, 165, 0.6);
+}
+
+/* .scroll-up-show {
+  display: block;
+} */

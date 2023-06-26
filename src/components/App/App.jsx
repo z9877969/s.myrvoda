@@ -1,11 +1,14 @@
+import { useMediaQuery } from 'react-responsive';
 import Main from '../Main';
 import Sidebar from '../Sidebar';
 import './App.css';
 
 function App() {
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+
   return (
     <div className="main-container">
-      <Sidebar />
+      {isDesktop && <Sidebar />}
       <Main />
     </div>
   );

@@ -1,15 +1,25 @@
 @import url('/src/styles/fonts/gilroy/stylesheet.css');
 @import url('/src/styles/fonts/ruberoid/stylesheet.css');
 
+/* @media screen and (min-width: 1280px) {
+
+} */
+
+/* import { useMediaQuery } from 'react-responsive';
+const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' }); */
+
 :root {
   --accent-color: #ff321b;
   --big-button-color: #223e7f;
-  --bg-light-color: #ebf3ff;
+  --bg-light-color: #fcfcfc;
+  --bg-medium-color: #ebf3ff;
   --bg-dark-color: #012756;
   --text-color: #012756;
+  --text-light-color: #223e7f;
   --sidebar-text-color: #fcfcfc;
   --form-text-color: #94a3c7;
   --round-btn-color: #d6e7ff;
+  --footer-stroke: #d6e7ff;
 }
 
 * {

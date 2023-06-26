@@ -1,7 +1,17 @@
 .heroBlock {
-  min-height: 900px;
-  background-repeat: no-repeat;
-  background-image: url('../../images/ship-descktop.png');
-  background-position: right;
+  display: flex;
+  flex-direction: column;
+  /* background-repeat: no-repeat;
+  background-image: url('../../images/hero-bg-mob.png'); */
+  /* background-position: right; */
   background-color: var(--bg-light-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .heroBlock {
+    min-height: 900px;
+    background-repeat: no-repeat;
+    background-image: url('../../images/hero-bg.png');
+    background-position: right;
+  }
 }

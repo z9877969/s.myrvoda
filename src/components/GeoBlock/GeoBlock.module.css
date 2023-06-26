@@ -1,0 +1,112 @@
+.geoBlock {
+  padding: 48px 16px 48px 16px;
+  background: var(--bg-medium-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.descriptionInside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* width: 438px; */
+}
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  gap: 25px;
+}
+
+.text {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+  color: var(--text-light-color);
+}
+
+.link {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+  color: var(--big-button-color);
+}
+
+.link::after {
+  padding-left: 15px;
+  content: url('../../images/arrowRight.svg');
+}
+
+@media screen and (min-width: 1280px) {
+  .geoBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 96px;
+    background: var(--bg-medium-color);
+    height: 837px;
+
+    gap: 0;
+  }
+
+  .description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+  }
+
+  .descriptionInside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 438px;
+    gap: 30px;
+  }
+
+  .contactUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .text {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    text-align: left;
+    letter-spacing: 0.24px;
+    color: var(--text-light-color);
+  }
+}

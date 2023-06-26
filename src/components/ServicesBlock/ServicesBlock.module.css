@@ -1,24 +1,10 @@
 .servicesBlock {
-  /* padding: 96px 96px 0 96px; */
-  padding: 96px;
-  height: 993px;
-  width: 1025px;
-  background: var(--bg-light-color);
+  padding: 48px 16px 48px 16px;
+  background: var(--bg-medium-color);
   display: flex;
   flex-direction: column;
-}
-
-.ourServ {
-  padding-bottom: 15px;
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  display: flex;
   align-items: center;
-  letter-spacing: 0.24px;
-  color: var(--accent-color);
+  text-align: center;
 }
 
 .taglineBlock {
@@ -28,15 +14,15 @@
   padding-bottom: 50px;
 }
 
-.tagline {
-  font-family: 'Ruberoid';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 39px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.24px;
-  text-transform: uppercase;
-  color: var(--text-color);
+@media screen and (min-width: 1280px) {
+  .servicesBlock {
+    padding: 96px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .taglineBlock {
+    padding: 0 0 50px 0;
+    flex-direction: unset;
+  }
 }

@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
-import s from "./NavItem.module.css";
+import PropTypes from 'prop-types';
+import s from './NavItem.module.css';
 
 const NavItem = ({ name }) => {
   const isActive = false;
@@ -8,7 +8,7 @@ const NavItem = ({ name }) => {
   isActive && navItenStyles.push(s.NavItemActive);
 
   return (
-    <a href="/" className={navItenStyles.join(" ")}>
+    <a href="/" className={navItenStyles.join(' ')}>
       <span className={s.itemName}>{name}</span>
     </a>
   );

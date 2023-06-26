@@ -5,22 +5,22 @@ import diagramUp from 'images/service-DiagramUp.svg';
 
 export const serviceConfig = [
   {
-    src: refreshSquare,
+    imgUrl: refreshSquare,
     text: 'Услуги по автоматизации судна',
     alt: 'refreshSquare',
   },
   {
-    src: settings,
+    imgUrl: settings,
     text: 'Техническое обслуживание',
     alt: 'settings',
   },
   {
-    src: tools,
+    imgUrl: tools,
     text: 'Техническое обслуживание',
     alt: 'tools',
   },
   {
-    src: diagramUp,
+    imgUrl: diagramUp,
     text: 'Техническое обслуживание',
     alt: 'diagramUp',
   },

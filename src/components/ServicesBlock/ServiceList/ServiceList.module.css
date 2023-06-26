@@ -1,17 +1,19 @@
 .list {
   display: flex;
-  position: inherit;
-  /* width: 1025px; */
-  /* height: 216px; */
-  /* flex-direction: column; */
-  align-items: stretch;
-  /* padding: 32px; */
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   gap: 16px;
+  padding-bottom: 25px;
 }
 
 .item {
-  width: 456px;
-  height: 267px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .descr {
@@ -22,6 +24,7 @@
   line-height: 40px;
 
   display: flex;
+  text-align: left;
   align-items: center;
   letter-spacing: 0.24px;
 
@@ -37,6 +40,7 @@
 
   display: flex;
   align-items: center;
+
   letter-spacing: 0.24px;
   color: var(--big-button-color);
 }
@@ -44,4 +48,26 @@
 .link::after {
   padding-left: 15px;
   content: url('../../../images/arrowRight.svg');
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (min-width: 1280px) {
+  .list {
+    padding-bottom: 0;
+    flex-direction: row;
+  }
+
+  .item {
+    width: 440px;
+    height: 245px;
+  }
+
+  .image {
+    width: 80px;
+    height: 80px;
+  }
 }
