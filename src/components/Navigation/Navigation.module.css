@@ -1,0 +1,10 @@
+.nav {
+  padding-left: 24px;
+}
+
+@media screen and (min-width: 1280px) {
+  .nav {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

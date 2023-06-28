@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
 import BigButton from 'common/BigButton';
+import PropTypes from 'prop-types';
 import s from './Form.module.css';
+import { useState } from 'react';
 
 const Form = ({ onSubmit }) => {
   const [customerName, setCustomerName] = useState('');
@@ -26,8 +26,9 @@ const Form = ({ onSubmit }) => {
 
   return (
     <div className={s.container}>
-      <div className={s.inner}>
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={s.inner}>
+        <label>
+          <p className={s.label}>Ваше Имя*</p>
           <input
             name="customerName"
             value={customerName}
@@ -36,6 +37,9 @@ const Form = ({ onSubmit }) => {
             required
             onChange={e => setCustomerName(e.target.value)}
           />
+        </label>
+        <label>
+          <p className={s.label}>Ваше Имя*</p>
           <input
             name="email"
             value={email}
@@ -44,6 +48,9 @@ const Form = ({ onSubmit }) => {
             required
             onChange={e => setEmail(e.target.value)}
           />
+        </label>
+        <label>
+          <p className={s.label}>Ваше Имя*</p>
           <input
             name="phone"
             value={phone}
@@ -51,6 +58,9 @@ const Form = ({ onSubmit }) => {
             placeholder="Номер телефона"
             onChange={e => setPhone(e.target.value)}
           />
+        </label>
+        <label>
+          <p className={s.label}>Ваше Имя*</p>
           <input
             name="themeMessage"
             value={themeMessage}
@@ -58,14 +68,19 @@ const Form = ({ onSubmit }) => {
             placeholder="Тема сообщения"
             onChange={e => setThemeMessage(e.target.value)}
           />
+        </label>
+        <label className={s.labelTextarea}>
+          <p className={s.label}>Ваше Имя*</p>
           <textarea
+          className={s.textarea}
             name="message"
             value={message}
             type="text"
             placeholder="Сообщение"
             onChange={e => setMessage(e.target.value)}
           ></textarea>
-          {/* <input
+        </label>
+        {/* <input
             name="message"
             value={message}
             type="text"
@@ -73,11 +88,10 @@ const Form = ({ onSubmit }) => {
             onChange={e => setMessage(e.target.value)}
           /> */}
 
-          <BigButton type="submit" text="Отправить" />
+        <BigButton type="submit" text="Отправить" />
 
-          <a href="http://">Ознакомиться с условиями конфиденциальности</a>
-        </form>
-      </div>
+        <a href="http://">Ознакомиться с условиями конфиденциальности</a>
+      </form>
     </div>
   );
 };

@@ -1,11 +1,11 @@
-import { useMediaQuery } from 'react-responsive';
-import { useState } from 'react';
-import ServiceList from './ServiceList';
 import BigButton from 'common/BigButton';
 import Form from 'common/Form';
 import Modal from 'common/Modal';
-import { serviceConfig } from 'data/service';
+import ServiceList from './ServiceList';
 import s from './ServicesBlock.module.css';
+import { serviceConfig } from 'data/service';
+import { useMediaQuery } from 'react-responsive';
+import { useState } from 'react';
 
 const ServicesBlock = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
@@ -24,12 +24,20 @@ const ServicesBlock = () => {
   // console.log(formsList);
   return (
     <div className={s.servicesBlock}>
-      <p className="headingBlock">Наши услуги</p>
-      <div className={s.taglineBlock}>
-        <h2 className="tagline">
-          Мы заботимся о наших клиентах и предоставляем лучший сервис
-        </h2>
-        {isDesktop && <BigButton onClick={openModal} text="Оставить заявку" />}
+      <div className={s.orderWrapepr}>
+        <div className={s.taglineBlock}>
+          <p className="headingBlock">Наши услуги</p>
+          <h2 className="tagline">
+            Мы заботимся о наших клиентах и предоставляем лучший сервис
+          </h2>
+        </div>
+        {isDesktop && (
+          <BigButton
+            onClick={openModal}
+            text="Оставить заявку"
+            className={s.buttonOrder}
+          />
+        )}
       </div>
 
       <ServiceList serviceConfig={serviceConfig} />

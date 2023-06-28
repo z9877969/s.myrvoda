@@ -2,6 +2,7 @@
 
 import PropTypes from 'prop-types';
 // import { useMediaQuery } from 'react-responsive';
+import s from './BigButton.module.css';
 
 const btnStyles = {
   display: 'flex',
@@ -36,20 +37,37 @@ const defineStyles = isGray => ({
   width: isGray ? '182px' : '201px',
   heigth: isGray ? '54px' : '56px',
 });
+// const defineStylesWithProps = ({ bgColor = '#012756', height = 'auto', color: '#FCFCFC'}) => ({
+//   ...btnStyles,
+//   backgroundColor: bgColor,
+//   color: color,
+//   fontSize: isGray ? '14px' : '16px',
+//   lineHeight: isGray ? '20px' : '24px',
+//   width: isGray ? '182px' : '201px',
+//   heigth: isGray ? '54px' : '56px',
+// });
 
 const BigButton = props => {
+  // const { bgColor , height  } = props;
   const {
     text,
     onClick = () => {},
     type = 'button',
     disabled = false,
     isGray = false,
+    className,
   } = props;
 
   const finalStyles = defineStyles(isGray);
 
   return (
-    <button css={finalStyles} type={type} onClick={onClick} disabled={disabled}>
+    <button
+      css={finalStyles}
+      type={type}
+      onClick={onClick}
+      className={className ? className : null}
+      disabled={disabled}
+    >
       <span className="heading">{text}</span>
     </button>
   );

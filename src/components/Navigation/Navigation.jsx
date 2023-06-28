@@ -1,9 +1,10 @@
 import NavItem from './NavItem/NavItem';
+import s from './Navigation.module.css';
 
 const Navigation = () => {
   return (
-    <nav>
-      <NavItem name="01. Главная" path="/home" />
+    <nav className={s.nav}>
+      <NavItem name="01. Главная" path="/" />
       <NavItem name="02. О Компании" path="/about-company" />
       <NavItem name="03. Услуги" path="/servises" />
       <NavItem name="04. Запчасти" path="/spares" />
