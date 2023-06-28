@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import { createPortal } from 'react-dom';
+// import { Component } from 'react';
+// import { createPortal } from 'react-dom';
 import arrowUp from 'images/arrowUp-d.svg';
 import s from './ScrollUp.module.css';
 
@@ -9,7 +9,7 @@ const ScrollUp = () => {
   return (
     <div>
       <a href="/" id="scroll" className={s.scroll}>
-        <img src={arrowUp} alt="logo" />
+        <img className={s.arrowUp} src={arrowUp} alt="logo" />
       </a>
     </div>
   );

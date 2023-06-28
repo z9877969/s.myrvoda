@@ -1,8 +1,21 @@
 .list {
   display: flex;
+  flex-direction: column;
 }
 
 .item {
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+  }
 }

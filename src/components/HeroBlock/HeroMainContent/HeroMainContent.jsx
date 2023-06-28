@@ -23,6 +23,7 @@ const HeroMainContent = () => {
   // console.log(formsList);
   return (
     <div className={s.heroContent}>
+      {/* <div> */}
       <p className={s.head}>
         Европейская компания с высококачественными решениями
       </p>
@@ -35,6 +36,7 @@ const HeroMainContent = () => {
         предоставляем необходимое оборудование, оригинальные и OEM запчасти, а
         также сервисное обслуживание в кратчайшие сроки и по разумной цене.
       </p>
+      {/* </div> */}
       {!isDesktop && <img src={ship} alt="ship" />}
       <div className={s.nav}>
         <BigButton onClick={openModal} text="Оставить заявку" />
@@ -43,7 +45,7 @@ const HeroMainContent = () => {
         </a>
 
         {isModalOpen && (
-          <Modal title="Отправить заявку" onClose={closeModal}>
+          <Modal title="Оставить заявку" onClose={closeModal}>
             <Form onSubmit={sendForm} />
           </Modal>
         )}

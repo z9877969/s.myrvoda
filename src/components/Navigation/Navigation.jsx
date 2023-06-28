@@ -1,18 +1,15 @@
-import PropTypes from 'prop-types';
 import NavItem from './NavItem/NavItem';
 
-const Navigation = ({ navConfig }) => {
+const Navigation = () => {
   return (
     <nav>
-      {navConfig.map(({ name }, index) => (
-        <NavItem key={index} name={name} />
-      ))}
+      <NavItem name="01. Главная" path="/home" />
+      <NavItem name="02. О Компании" path="/about-company" />
+      <NavItem name="03. Услуги" path="/servises" />
+      <NavItem name="04. Запчасти" path="/spares" />
+      <NavItem name="05. Контакты" path="/contacts" />
     </nav>
   );
-};
-
-Navigation.propTypes = {
-  navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Navigation;

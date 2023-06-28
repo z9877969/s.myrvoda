@@ -1,0 +1,17 @@
+.heroAboutBlock {
+  display: flex;
+  flex-direction: column;
+  /* background-repeat: no-repeat;
+    background-image: url('../../images/hero-bg-mob.png'); */
+  /* background-position: right; */
+  background-color: var(--bg-light-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .heroAboutBlock {
+    min-height: 699px;
+    background-repeat: no-repeat;
+    background-image: url('../../images/hero-bg-about.png');
+    background-position: right;
+  }
+}

@@ -16,12 +16,12 @@ export const serviceConfig = [
   },
   {
     imgUrl: tools,
-    text: 'Техническое обслуживание',
+    text: 'Запчасти',
     alt: 'tools',
   },
   {
     imgUrl: diagramUp,
-    text: 'Техническое обслуживание',
+    text: 'Система  энергоэффективности судна',
     alt: 'diagramUp',
   },
 ];

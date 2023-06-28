@@ -6,12 +6,15 @@
   padding-left: 24px;
   background-color: var(--bg-dark-color);
 
+  /* position: absolute; */
   /* position: sticky; */
-  /* position: fixed; */
+  position: relative;
   /* height: 100%; */
   /* width: 12%; */
-  /* left: 50%;
-  margin-right: -50%; */
+  top: 80px;
+  left: 41.8%;
+  /* right: 141px; */
+  /* margin-right: -45%; */
 }
 
 .logo {
@@ -24,8 +27,24 @@
   height: 100px;
   float: right;
 } */
-.sidebar.fixed {
+/* .sidebar.fixed {
   position: fixed;
   left: 50%;
   margin-right: -50%;
+} */
+
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 24px;
+    padding-left: 24px;
+    background-color: var(--bg-dark-color);
+  }
+
+  .logo {
+    padding-bottom: 179px;
+  }
 }

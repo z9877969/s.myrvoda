@@ -1,0 +1,52 @@
+.aboutFactBlock {
+  padding: 48px 16px 48px 16px;
+  background: var(--bg-medium-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  gap: 16px;
+}
+
+.contacts {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.link {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+  color: var(--big-button-color);
+}
+
+.link::after {
+  padding-left: 15px;
+  content: url('../../images/arrowRight.svg');
+}
+
+@media screen and (min-width: 1280px) {
+  .aboutFactBlock {
+    padding: 96px;
+    gap: 64px;
+  }
+
+  .taglineAbout {
+    width: 100%;
+  }
+
+  .contacts {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+  }
+}

@@ -17,6 +17,7 @@
 }
 
 .headerMob {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -25,6 +26,7 @@
   width: 100%;
   padding: 16px;
 }
+
 .menuBtn {
   display: flex;
   font-family: 'Gilroy';

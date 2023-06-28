@@ -20,8 +20,8 @@
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 600;
-  font-size: 26px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 30px;
 
   display: flex;
   text-align: left;
@@ -64,6 +64,11 @@
   .item {
     width: 440px;
     height: 245px;
+  }
+
+  .descr {
+    font-size: 26px;
+    line-height: 40px;
   }
 
   .image {

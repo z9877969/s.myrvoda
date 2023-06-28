@@ -1,7 +1,8 @@
 import { useMediaQuery } from 'react-responsive';
-import Main from '../Main';
-import Sidebar from '../Sidebar';
+import Main from 'components/Main';
+import Sidebar from 'components/Sidebar';
 import './App.css';
+import Footer from 'components/Footer';
 
 function App() {
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
@@ -9,7 +10,10 @@ function App() {
   return (
     <div className="main-container">
       {isDesktop && <Sidebar />}
-      <Main />
+      <div>
+        <Main />
+        <Footer />
+      </div>
     </div>
   );
 }
@@ -19,6 +23,7 @@ export default App;
 // npm install --save-dev prettier eslint
 // npx mrm@2 lint-staged
 // npm i @emotion/react
+// npm install react-router-dom@5
 
 // npm install --save-dev prop-types
 // npm install react-icons --save

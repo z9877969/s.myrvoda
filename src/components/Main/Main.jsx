@@ -1,25 +1,46 @@
 // import { useMediaQuery } from 'react-responsive';
-import Container from 'common/Container';
-import HeroBlock from 'components/HeroBlock';
-import ServicesBlock from 'components/ServicesBlock';
-import AdvantagesBlock from 'components/AdvantagesBlock';
-import GeoBlock from 'components/GeoBlock';
-import Footer from 'components/Footer';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import HomePage from 'pages/HomePage';
+import AboutCompanyPage from 'pages/AboutCompanyPage';
+import ServicesListPage from 'pages/ServicesListPage';
+// import ServicePage from 'pages/ServicePage';
+import SparesPage from 'pages/SparesPage';
+import ContactsPage from 'pages/ContactsPage';
+
 // import s from './Main.module.css';
 
 const Main = () => {
-  // const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   // const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+
   return (
-    <>
-      <Container>
-        <HeroBlock />
-        <ServicesBlock />
-        <AdvantagesBlock />
-        <GeoBlock />
-        <Footer />
-      </Container>
-    </>
+    <main>
+      <Switch>
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+
+        <Route exact path="/home">
+          <HomePage />
+        </Route>
+
+        <Route path="/about-company">
+          <AboutCompanyPage />
+        </Route>
+
+        <Route path="/servises">
+          <ServicesListPage />
+        </Route>
+        {/* <Route path="/servises/:id">
+          <ServicePage />
+        </Route> */}
+
+        <Route path="/spares">
+          <SparesPage />
+        </Route>
+
+        <Route path="/contacts">
+          <ContactsPage />
+        </Route>
+      </Switch>
+    </main>
   );
 };
 

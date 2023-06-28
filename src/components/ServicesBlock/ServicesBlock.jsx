@@ -31,11 +31,13 @@ const ServicesBlock = () => {
         </h2>
         {isDesktop && <BigButton onClick={openModal} text="Оставить заявку" />}
       </div>
+
       <ServiceList serviceConfig={serviceConfig} />
+
       {!isDesktop && <BigButton onClick={openModal} text="Оставить заявку" />}
 
       {isModalOpen && (
-        <Modal title="Отправить заявку" onClose={closeModal}>
+        <Modal title="Оставить заявку" onClose={closeModal}>
           <Form onSubmit={sendForm} />
         </Modal>
       )}

@@ -1,0 +1,61 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  /* padding-bottom: 25px; */
+}
+
+.item {
+  padding: 18px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-light-color);
+  gap: 16px;
+  text-align: start;
+  align-items: flex-start;
+}
+
+.count {
+  font-family: 'Ruberoid';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+.count::before {
+  padding-right: 5px;
+  content: url('../../../images/Ellipse.svg');
+}
+
+.descr {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.24px;
+  color: var(--text-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .list {
+    flex-direction: row;
+  }
+
+  .item {
+    padding: 13px;
+    height: 100%;
+  }
+
+  .descr {
+    width: 305px;
+  }
+}
