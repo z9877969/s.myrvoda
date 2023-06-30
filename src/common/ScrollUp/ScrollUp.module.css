@@ -22,11 +22,9 @@
   height: 32px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .scroll {
     position: absolute;
-    /* position: fixed; */
-    /* display: none; */
     bottom: 195px;
     right: 96px;
     z-index: 30;
@@ -49,8 +47,30 @@
     width: 64px;
     height: 64px;
   }
-
-  /* .scroll-up-show {
-    display: block;
-  } */
 }
+/* @media screen and (min-width: 1280px) {
+  .scroll {
+    position: absolute;
+    bottom: 195px;
+    right: 96px;
+    z-index: 30;
+    border-radius: 50%;
+
+    line-height: 30px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: all 200ms;
+    cursor: pointer;
+  }
+
+  .scroll:hover {
+    box-shadow: 0 1px 8px 3px rgba(165, 165, 165, 0.6);
+  }
+
+  .arrowUp {
+    width: 64px;
+    height: 64px;
+  }
+} */

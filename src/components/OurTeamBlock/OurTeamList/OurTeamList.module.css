@@ -1,0 +1,40 @@
+.list {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.name {
+  font-family: 'Ruberoid';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.position {
+  width: 230px;
+}
+
+@media screen and (min-width: 1440px) {
+  .list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* .item {
+    gap: 20px;
+  } */
+}

@@ -1,0 +1,39 @@
+.automation {
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px 16px 48px 16px; */
+  background-color: var(--bg-light-color);
+}
+
+/* .hero {
+  width: 343px;
+  height: 220px;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(141, 189, 243, 0.3),
+      rgba(141, 189, 243, 0.3)
+    ),
+    url('../../../images/serv-auto-bg-mob.png');
+  align-self: center;
+  color: rgb(217, 217, 217);
+} */
+
+.title {
+  font-family: 'Ruberoid';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 39px;
+  /* display: flex;*/
+  text-align: center;
+  /* letter-spacing: 0.24px; */
+  text-transform: uppercase;
+  /* color: var(--sidebar-text-color); */
+}
+.target {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1440px) {
+}

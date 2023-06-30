@@ -5,7 +5,8 @@ import s from './GeoBlock.module.css';
 import BigButton from 'common/BigButton';
 
 const GeoBlock = () => {
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  // const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
   const globeImage = isDesktop ? globe : globeMob;
 
   return (

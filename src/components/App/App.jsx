@@ -1,16 +1,19 @@
-import { useMediaQuery } from 'react-responsive';
+import './App.css';
+
+import Footer from 'components/Footer';
+import Header from 'components/Header/Header';
 import Main from 'components/Main';
 import Sidebar from 'components/Sidebar';
-import './App.css';
-import Footer from 'components/Footer';
+import { useMediaQuery } from 'react-responsive';
 
 function App() {
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
 
   return (
     <div className="main-container">
       {isDesktop && <Sidebar />}
-      <div>
+      <div className="main-wrapper">
+        <Header />
         <Main />
         <Footer />
       </div>

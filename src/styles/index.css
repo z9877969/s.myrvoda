@@ -1,12 +1,14 @@
 @import url('/src/styles/fonts/gilroy/stylesheet.css');
 @import url('/src/styles/fonts/ruberoid/stylesheet.css');
 
-/* @media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1440px) {
 
 } */
 
 /* import { useMediaQuery } from 'react-responsive';
-const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' }); */
+const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' }); */
+
+/* <SendInfo linkName="Ознакомиться с услугами" linkPath="/" hideLink={true}/> */
 
 :root {
   --accent-color: #ff321b;
@@ -64,4 +66,17 @@ ul {
 a {
   outline: none;
   text-decoration: none;
+}
+
+p {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.24px;
+
+  color: var(--text-color);
 }

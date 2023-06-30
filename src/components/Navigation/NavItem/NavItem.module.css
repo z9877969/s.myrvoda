@@ -1,5 +1,5 @@
 .NavItem {
-  padding: 12px 24px;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   color: var(--sidebar-text-color);
@@ -12,7 +12,7 @@
 }
 
 .NavItem .itemName {
-  margin-left: 24px;
+  /* margin-left: 24px; */
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;

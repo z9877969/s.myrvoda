@@ -48,15 +48,15 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 1280px) {
+/* @media screen and (min-width: 1280px) {
   .modal {
     max-width: 640px;
     height: 729px;
-    /* display: flex;
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    gap: 32px; */
+  }
+} */
+@media screen and (min-width: 1440px) {
+  .modal {
+    max-width: 640px;
+    height: 729px;
   }
 }

@@ -1,12 +1,12 @@
 import { aboutFactConfig } from 'data/about-fact';
 import { useMediaQuery } from 'react-responsive';
+import ScrollUp from 'common/ScrollUp';
+import SendInfo from 'common/SendInfo';
 import AboutFactList from './AboutFactList';
-import BigButton from 'common/BigButton';
 import s from './AboutFactBlock.module.css';
-import ScrollUp from 'common/ScrollUp/ScrollUp';
 
 const AbotFactBlock = () => {
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
 
   return (
     <div className={s.aboutFactBlock}>
@@ -17,12 +17,7 @@ const AbotFactBlock = () => {
       </div>
       <AboutFactList aboutFactConfig={aboutFactConfig} />
 
-      <div className={s.contacts}>
-        <BigButton text="Контакты" />
-        <a href="/" className={s.link}>
-          Ознакомиться с услугами
-        </a>
-      </div>
+      <SendInfo linkName="Ознакомиться с услугами" linkPath="/" />
 
       {!isDesktop && <ScrollUp />}
     </div>

@@ -33,10 +33,10 @@
   content: url('../../images/arrowRight.svg');
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .aboutFactBlock {
     padding: 96px;
-    gap: 64px;
+    gap: 36px;
   }
 
   .taglineAbout {
