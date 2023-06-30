@@ -27,7 +27,11 @@ const HeroBlock = () => {
 
         {!isDesktop && <img src={ship} alt="ship" />}
 
-        <SendInfo linkName="Ознакомиться с услугами" linkPath="/" />
+        <SendInfo
+          linkName="Ознакомиться с услугами"
+          linkPath="/"
+          hideLink={false}
+        />
 
         <div className={s.nav}></div>
         <ul className={s.list}>

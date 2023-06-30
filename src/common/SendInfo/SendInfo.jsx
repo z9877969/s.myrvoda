@@ -40,7 +40,7 @@ const SendInfo = ({ linkName = '', linkPath = '', hideLink }) => {
 SendInfo.propTypes = {
   linkName: PropTypes.string.isRequired,
   linkPath: PropTypes.string.isRequired,
-  isShowLink: PropTypes.bool,
+  hideLink: PropTypes.bool.isRequired,
 };
 
 export default SendInfo;

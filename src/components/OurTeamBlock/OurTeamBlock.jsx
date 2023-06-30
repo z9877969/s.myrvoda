@@ -16,7 +16,11 @@ const OurTeamBlock = () => {
 
       <OurTeamList ourTeamConfig={ourTeamConfig} />
 
-      <SendInfo linkName="Ознакомиться с услугами" linkPath="/" />
+      <SendInfo
+        linkName="Ознакомиться с услугами"
+        linkPath="/"
+        hideLink={false}
+      />
     </div>
   );
 };

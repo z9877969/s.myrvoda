@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import s from './NavItem.module.css';
+import s from './MenuItem.module.css';
 
-const NavItem = ({ name, path }) => {
+const MenuItem = ({ name, path }) => {
   const isActive = false;
 
   const navItemStyles = [s.NavItem];
@@ -20,9 +20,9 @@ const NavItem = ({ name, path }) => {
   );
 };
 
-NavItem.propTypes = {
+MenuItem.propTypes = {
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
 
-export default NavItem;
+export default MenuItem;

@@ -21,7 +21,11 @@ const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' }); */
   --sidebar-text-color: #fcfcfc;
   --form-text-color: #94a3c7;
   --round-btn-color: #d6e7ff;
+  --card-bg: #d6e7ff;
   --footer-stroke: #d6e7ff;
+
+  --mask-bg: rgba(20, 106, 204, 0.3);
+  /* --mask-bg: rgba(217, 217, 217, 0.3); */
 }
 
 * {

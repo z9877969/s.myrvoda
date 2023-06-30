@@ -17,7 +17,11 @@ const AbotFactBlock = () => {
       </div>
       <AboutFactList aboutFactConfig={aboutFactConfig} />
 
-      <SendInfo linkName="Ознакомиться с услугами" linkPath="/" />
+      <SendInfo
+        linkName="Ознакомиться с услугами"
+        linkPath="/"
+        hideLink={false}
+      />
 
       {!isDesktop && <ScrollUp />}
     </div>

@@ -7,12 +7,12 @@ import s from './AutomationService.module.css';
 
 const AutomationService = () => {
   return (
-    <div className={s.automation}>
+    <div className={s.blockWrapper}>
       <div className={s.hero}>
         <p className={s.title}>Автоматизация процессов на судне</p>
       </div>
-      {/* <span className={s.target}> Наша цель</span> */}
-      <p>
+
+      <p className={s.text}>
         Наша цель - помочь клиентам автоматизировать ответственные с точки
         зрения безопасности эксплуатации процессы, а также наиболее трудоемкие и
         регулярно повторяющиеся операции.

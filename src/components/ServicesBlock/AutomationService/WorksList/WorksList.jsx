@@ -18,7 +18,11 @@ const WorksList = ({ worksConfig }) => {
         ))}
       </ul>
 
-      <SendInfo linkName="Техническое обслуживание" linkPath="/" />
+      <SendInfo
+        linkName="Техническое обслуживание"
+        linkPath="/"
+        hideLink={false}
+      />
     </div>
   );
 };

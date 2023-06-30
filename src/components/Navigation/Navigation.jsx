@@ -1,4 +1,4 @@
-import NavItem from './NavItem/NavItem';
+import NavItem from './NavItem';
 import s from './Navigation.module.css';
 
 const Navigation = () => {

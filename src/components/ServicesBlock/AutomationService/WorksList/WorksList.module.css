@@ -36,7 +36,12 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .blockWrapper {
+    padding: 48px 0;
+    gap: 36px;
+  }
   .title {
+    width: calc(45%);
     font-size: 26px;
     line-height: 40px;
   }
