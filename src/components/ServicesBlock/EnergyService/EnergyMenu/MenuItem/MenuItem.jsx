@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useRouteMatch } from 'react-router-dom';
 import s from './MenuItem.module.css';
 
-const MenuItem = ({ name, path }) => {
+const MenuItem = ({ name, to }) => {
+  const match = useRouteMatch();
+  // console.log(match);
   const isActive = false;
 
   const navItemStyles = [s.NavItem];
@@ -10,7 +12,8 @@ const MenuItem = ({ name, path }) => {
 
   return (
     <NavLink
-      to={path}
+      // to={to}
+      to={`${match.url}/${to}`}
       className={navItemStyles.join(' ')}
       activeClassName={s.NavItemActive}
       exact
@@ -22,7 +25,7 @@ const MenuItem = ({ name, path }) => {
 
 MenuItem.propTypes = {
   name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired,
 };
 
 export default MenuItem;

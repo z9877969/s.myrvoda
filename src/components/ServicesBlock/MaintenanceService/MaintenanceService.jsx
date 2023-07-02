@@ -5,11 +5,11 @@ import { measurementsConfig } from 'data/measurements';
 
 const MaintenanceService = () => {
   return (
-    <div div className={s.blockWrapper}>
+    <div className={s.blockWrapper}>
       <div className={s.hero}>
         <p className={s.title}>Техническое обслуживание</p>
       </div>
-      {/* <span className={s.target}> Наша цель</span> */}
+
       <div>
         <p className={s.text}>
           Мы предоставляем услуги ультразвуковых измерений толщин на всех типах

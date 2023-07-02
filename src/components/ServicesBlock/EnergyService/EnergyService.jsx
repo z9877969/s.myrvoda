@@ -1,28 +1,36 @@
+import {
+  Redirect,
+  Route,
+  Switch,
+  useRouteMatch,
+  NavLink,
+} from 'react-router-dom';
+
 import EnergyMenu from './EnergyMenu';
-import quotes from 'images/quotes.svg';
+import OnBoard from './OnBoard';
+import Focus from './Focus';
+import Office from './Office';
+
 import s from './EnergyService.module.css';
 
 const EnergyService = () => {
+  const match = useRouteMatch();
+
   return (
     <div className={s.blockWrapper}>
       <EnergyMenu />
 
-      <div className={s.hero}>
-        <p className={s.title}>Решение на борту</p>
-      </div>
-
-      <div className={s.descrWrapper}>
-        <img className={s.quotes} src={quotes} alt="quotes" />
-
-        <p className={s.head}>
-          Ваш первый шаг к снижению расхода топлива и повышению эффективности
-          эксплуатационных характеристик судна
-        </p>
-        <p className={s.text}>
-          Наша система прекрасно интегрируется с другими установленными на борту
-          судна системами, позволяя отображать все необходимые параметры.
-        </p>
-      </div>
+      <Switch>
+        <Route path={`${match.path}/on-board`}>
+          <OnBoard />
+        </Route>
+        <Route path={`${match.path}/focus`}>
+          <Focus />
+        </Route>
+        <Route path={`${match.path}/office`}>
+          <Office />
+        </Route>
+      </Switch>
     </div>
   );
 };
