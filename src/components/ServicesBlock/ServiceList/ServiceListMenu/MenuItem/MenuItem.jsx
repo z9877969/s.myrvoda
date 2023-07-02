@@ -14,7 +14,6 @@ const MenuItem = ({ imgUrl, name, alt, to }) => {
       to={`${match.url}/${to}`}
       className={navItemStyles.join(' ')}
       activeClassName={s.NavItemActive}
-      exact
     >
       <img className={s.img} src={imgUrl} alt={alt} />
       <span className={s.itemName}>{name}</span>
@@ -30,27 +29,3 @@ MenuItem.propTypes = {
 };
 
 export default MenuItem;
-// const MenuItem = ({ name, path }) => {
-//   const isActive = false;
-
-//   const navItemStyles = [s.NavItem];
-//   isActive && navItemStyles.push(s.NavItemActive);
-
-//   return (
-//     <NavLink
-//       to={path}
-//       className={navItemStyles.join(' ')}
-//       activeClassName={s.NavItemActive}
-//       exact
-//     >
-//       <span className={s.itemName}>{name}</span>
-//     </NavLink>
-//   );
-// };
-
-// MenuItem.propTypes = {
-//   name: PropTypes.string.isRequired,
-//   path: PropTypes.string.isRequired,
-// };
-
-// export default MenuItem;

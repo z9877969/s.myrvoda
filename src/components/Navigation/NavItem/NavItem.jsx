@@ -13,7 +13,6 @@ const NavItem = ({ name, path }) => {
       to={path}
       className={navItemStyles.join(' ')}
       activeClassName={s.NavItemActive}
-      exact
     >
       <span className={s.itemName}>{name}</span>
     </NavLink>

@@ -1,10 +1,4 @@
-import {
-  Redirect,
-  Route,
-  Switch,
-  useRouteMatch,
-  NavLink,
-} from 'react-router-dom';
+import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 
 import EnergyMenu from './EnergyMenu';
 import OnBoard from './OnBoard';
@@ -21,6 +15,12 @@ const EnergyService = () => {
       <EnergyMenu />
 
       <Switch>
+        <Route
+          exact
+          path={`${match.path}`}
+          render={() => <Redirect to={`${match.path}/on-board`} />}
+        />
+
         <Route path={`${match.path}/on-board`}>
           <OnBoard />
         </Route>

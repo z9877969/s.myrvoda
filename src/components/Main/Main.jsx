@@ -1,5 +1,4 @@
-// import { Redirect, Route, Switch } from 'react-router-dom';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
 import AboutCompanyPage from 'pages/AboutCompanyPage';
 import ContactsPage from 'pages/ContactsPage';
@@ -15,9 +14,9 @@ const Main = () => {
   return (
     <main>
       <Switch>
-        {/* <Route exact path="/" render={() => <Redirect to="/home" />} /> */}
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
 
-        <Route exact path="/">
+        <Route exact path="/home">
           <HomePage />
         </Route>
 

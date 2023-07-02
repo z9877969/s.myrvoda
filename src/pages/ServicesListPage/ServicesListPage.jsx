@@ -1,10 +1,4 @@
-import {
-  Redirect,
-  Route,
-  Switch,
-  useRouteMatch,
-  NavLink,
-} from 'react-router-dom';
+import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import Container from 'common/Container';
 import AutomationService from 'components/ServicesBlock/AutomationService';
@@ -34,13 +28,12 @@ const ServicesListPage = () => {
       <Container>
         <div className={s.servicesBlock}>
           <Switch>
-            {/* <Route
+            <Route
               exact
-              path="/services"
-              render={() => <Redirect to="/services/automation" />}
-            /> */}
+              path={`${match.path}`}
+              render={() => <Redirect to={`${match.path}/automation`} />}
+            />
 
-            {/* path='/services/automation' */}
             <Route path={`${match.path}/automation`}>
               <AutomationService />
             </Route>
