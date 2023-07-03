@@ -1,7 +1,6 @@
 import BigButton from 'common/BigButton';
 import Contacts from 'common/Contacts';
 import Logo from 'images/Logo.svg';
-// import { Link } from "react-router-dom";
 import Navigation from '../Navigation/Navigation';
 import clsx from 'clsx';
 import { contactsConfig } from 'data/contacts';
@@ -18,9 +17,7 @@ const Sidebar = ({ isOpen }) => {
     <div className={clsx(s.sidebar, isOpen && s.isOpen)}>
       {isDesktop && (
         <div className={s.logo}>
-          {/* <Link className={s.logo} to="/"> */}
           <img src={logo1} alt="logo" />
-          {/* </Link> */}
         </div>
       )}
       <>

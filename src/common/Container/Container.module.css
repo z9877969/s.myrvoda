@@ -1,20 +1,23 @@
+/* .container {
+  margin: 0 auto;
+  max-width: 375px;
+  padding: 0 16px;
+  background-color: tomato;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1217px;
+    padding: 0 96px;
+  }
+} */
+
+/* .............................................. */
 .container {
-  display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* padding-left: 16px;
-  padding-right: 16px; */
   max-width: 375px;
   background-color: tomato;
 }
 
-/* @media screen and (min-width: 1280px) {
-  .container {
-    max-width: 1217px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-} */
 @media screen and (min-width: 1440px) {
   .container {
     margin-left: auto;

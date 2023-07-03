@@ -6,7 +6,8 @@ import HomePage from 'pages/HomePage';
 import ServicesListPage from 'pages/ServicesListPage';
 // import ServicePage from 'pages/ServicePage';
 import SparesPage from 'pages/SparesPage';
-import ServicePage from 'pages/ServicePage';
+
+import NotFound from 'pages/NotFound';
 
 // import s from './Main.module.css';
 
@@ -29,10 +30,6 @@ const Main = () => {
           <ServicesListPage />
         </Route>
 
-        <Route exact path="/services/:id">
-          <ServicePage />
-        </Route>
-
         {/*--- SPARES ------------------------*/}
         <Route path="/spares">
           <SparesPage />
@@ -40,6 +37,10 @@ const Main = () => {
 
         <Route path="/contacts">
           <ContactsPage />
+        </Route>
+
+        <Route>
+          <NotFound />
         </Route>
       </Switch>
     </main>

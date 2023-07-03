@@ -2,31 +2,15 @@
   position: relative;
   display: flex;
   width: 375px;
-  /* align-items: stretch; */
-  /* min-height: 100vh; */
+
   margin: 0 auto;
   overflow-x: hidden;
 }
-
-.main-wrapper {
-}
-
-/* @media screen and (min-width: 1280px) {
-  .main-container {
-    max-width: 1440px;
-    width: 84.5%;
-  }
-  .main-wrapper {
-    position: relative;
-    width: 84.5%;
-  }
-} */
 
 @media screen and (min-width: 1440px) {
   .main-container {
     max-width: none;
     width: 1440px;
-    /* max-width: 1440px; */
   }
 
   .main-wrapper {

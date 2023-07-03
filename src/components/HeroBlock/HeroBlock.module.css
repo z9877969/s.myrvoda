@@ -106,7 +106,6 @@
 @media screen and (min-width: 1440px) {
   .heroBlock {
     min-height: 835px;
-    /* min-height: 900px; */
     background-repeat: no-repeat;
     background-image: url('../../images/hero-bg.png');
     background-position: right;
