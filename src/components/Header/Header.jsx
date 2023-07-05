@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-// import { useLockBodyScroll } from 'react-use';
 import { useMediaQuery } from 'react-responsive';
 
 import BigButton from 'common/BigButton';
@@ -17,18 +16,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => setIsOpen(prevIsOpen => !prevIsOpen);
 
-  // useLockBodyScroll(isOpen);
-
   useEffect(() => {
     if (isDesktop) setIsOpen(false);
 
-    isOpen
-      ? (document.body.style.overflow = 'hidden')
-      : (document.body.style.overflow = 'auto');
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isDesktop, isOpen]);
 
   return (
-    // <div className={s.block}>
     <header className={s.mainHeader}>
       {isDesktop ? (
         <>
@@ -53,7 +47,6 @@ const Header = () => {
         </>
       )}
     </header>
-    // </div>
   );
 };
 

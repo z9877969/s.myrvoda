@@ -1,10 +1,10 @@
 import { Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import Container from 'common/Container';
+import BlockNavigation from 'components/BlockNavigation';
 import AutomationService from 'components/ServicesBlock/AutomationService';
 import MaintenanceService from 'components/ServicesBlock/MaintenanceService';
 import EnergyService from 'components/ServicesBlock/EnergyService';
-import ServiceListMenu from 'components/ServicesBlock/ServiceList/ServiceListMenu';
 import { servicesListConfig } from 'data/services-list';
 import s from './ServicesListPage.module.css';
 
@@ -16,17 +16,11 @@ const ServicesListPage = () => {
     <div className={s.pageWrapper}>
       <div className={s.taglineWrapper}>
         <h1 className="taglineBig">Услуги</h1>
-        {isDesktop && (
-          <ServiceListMenu servicesListConfig={servicesListConfig} />
-        )}
-
-        {/* <NavLink to={`${match.url}/automation`}>automation</NavLink>
-        <NavLink to={`${match.url}/maintenance`}>maintenance</NavLink>
-        <NavLink to={`${match.url}/energy`}>energy</NavLink> */}
+        {isDesktop && <BlockNavigation navConfig={servicesListConfig} />}
       </div>
 
       <Container>
-        <div className={s.servicesBlock}>
+        <div className={s.pagesBlock}>
           <Switch>
             <Route
               exact

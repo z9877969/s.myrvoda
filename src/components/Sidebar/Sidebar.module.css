@@ -28,18 +28,16 @@
 
 @media screen and (min-width: 1440px) {
   .sidebar {
-    position: inherit;
+    /* position: inherit; */
     display: flex;
     flex-direction: column;
     background-color: var(--bg-dark-color);
-    width: 15.5%;
+    /* width: 15.5%; */
+    width: 223px;
 
-    /* reset after mobile */
     position: static;
     height: 100vh;
-    /* height: 100%; */
     z-index: 0;
-    /* reset after mobile -END*/
   }
 
   .logo {

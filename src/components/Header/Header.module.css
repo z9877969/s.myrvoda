@@ -1,15 +1,13 @@
 .block {
   display: flex;
   padding: 0;
-  /* background-color: var(--bg-dark-color); */
 }
 
 .mainHeader {
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 1222px; */
+
   width: 375px;
   height: 68px;
 

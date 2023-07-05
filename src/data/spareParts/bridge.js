@@ -1,46 +1,58 @@
 const automation = [
-  {
-    brand: 'ABB',
-  },
-  {
-    brand: 'BOSCH',
-  },
-  {
-    brand: 'HONEYWELL',
-  },
-  {
-    brand: 'SIEMENS',
-  },
-  {
-    brand: 'DANFOSS',
-  },
-  {
-    brand: 'LEROY SOMER',
-  },
+  'ABB',
+  'BOSCH',
+  'HONEYWELL',
+  'SIEMENS',
+  'LEROY SOMER',
+  // {
+  //   brand: 'ABB',
+  // },
+  // {
+  //   brand: 'BOSCH',
+  // },
+  // {
+  //   brand: 'HONEYWELL',
+  // },
+  // {
+  //   brand: 'SIEMENS',
+  // },
+  // {
+  //   brand: 'DANFOSS',
+  // },
+  // {
+  //   brand: 'LEROY SOMER',
+  // },
 ];
 
 const navigation = [
-  {
-    brand: 'CONSILIUM',
-  },
-  {
-    brand: 'INMARSAT',
-  },
-  {
-    brand: 'MARTEK MARINE',
-  },
-  {
-    brand: 'KONGSBERG',
-  },
-  {
-    brand: 'RAYTHEON',
-  },
-  {
-    brand: 'SPERRY MARINE',
-  },
-  {
-    brand: 'CPLATH',
-  },
+  'CONSILIUM',
+  'INMARSAT',
+  'MARTEK MARINE',
+  'KONGSBERG',
+  'RAYTHEON',
+  'SPERRY MARINE',
+  'CPLATH',
+  // {
+  //   brand: 'CONSILIUM',
+  // },
+  // {
+  //   brand: 'INMARSAT',
+  // },
+  // {
+  //   brand: 'MARTEK MARINE',
+  // },
+  // {
+  //   brand: 'KONGSBERG',
+  // },
+  // {
+  //   brand: 'RAYTHEON',
+  // },
+  // {
+  //   brand: 'SPERRY MARINE',
+  // },
+  // {
+  //   brand: 'CPLATH',
+  // },
 ];
 
 const communication = [
@@ -64,7 +76,7 @@ const communication = [
   },
 ];
 
-const bridgeConsole = [
+const console = [
   {
     brand: 'KONGSBERG',
   },
@@ -79,6 +91,6 @@ const bridgeConsole = [
   },
 ];
 
-const bridge = { automation, navigation, communication, bridgeConsole };
+const bridge = { automation, navigation, communication, console };
 
-export { automation, navigation, communication, bridgeConsole, bridge };
+export { automation, navigation, communication, console, bridge };

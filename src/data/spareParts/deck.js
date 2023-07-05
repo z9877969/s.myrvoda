@@ -1,37 +1,46 @@
-const windlasses = [
-  {
-    brand: 'TOWIMOR',
-  },
-  {
-    brand: 'EMCE WINCES',
-  },
-  {
-    brand: 'NORT SEA WINCHES',
-  },
-  {
-    brand: 'RAPP MARINE',
-  },
+const anchorWindlasses = [
+  'TOWIMOR',
+  'EMCE WINCES',
+  'NORT SEA WINCHES',
+  'RAPP MARINE',
+  // {
+  //   brand: 'TOWIMOR',
+  // },
+  // {
+  //   brand: 'EMCE WINCES',
+  // },
+  // {
+  //   brand: 'NORT SEA WINCHES',
+  // },
+  // {
+  //   brand: 'RAPP MARINE',
+  // },
 ];
 
 const winches = [
-  {
-    brand: 'ROLLS-ROYCE',
-  },
-  {
-    brand: 'AKER BRATTVAAG',
-  },
-  {
-    brand: 'ODIM',
-  },
-  {
-    brand: 'EMCE WINCHES',
-  },
-  {
-    brand: 'NORWINCH',
-  },
-  {
-    brand: 'NORT SEA WINCHES',
-  },
+  'ROLLS-ROYCE',
+  'AKER BRATTVAAG',
+  'ODIM',
+  'NORWINCH',
+  'NORT SEA WINCHES',
+  // {
+  //   brand: 'ROLLS-ROYCE',
+  // },
+  // {
+  //   brand: 'AKER BRATTVAAG',
+  // },
+  // {
+  //   brand: 'ODIM',
+  // },
+  // {
+  //   brand: 'EMCE WINCHES',
+  // },
+  // {
+  //   brand: 'NORWINCH',
+  // },
+  // {
+  //   brand: 'NORT SEA WINCHES',
+  // },
 ];
 
 const deckCranes = [
@@ -185,7 +194,7 @@ const ropes = [
 ];
 
 const deck = {
-  windlasses,
+  anchorWindlasses,
   winches,
   deckCranes,
   anchorChains,
@@ -195,7 +204,7 @@ const deck = {
 };
 
 export {
-  windlasses,
+  anchorWindlasses,
   winches,
   deckCranes,
   anchorChains,

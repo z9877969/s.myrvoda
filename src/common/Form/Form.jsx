@@ -80,13 +80,6 @@ const Form = ({ onSubmit }) => {
             onChange={e => setMessage(e.target.value)}
           ></textarea>
         </label>
-        {/* <input
-            name="message"
-            value={message}
-            type="text"
-            placeholder="Сообщение"
-            onChange={e => setMessage(e.target.value)}
-          /> */}
 
         <BigButton type="submit" text="Отправить" />
 

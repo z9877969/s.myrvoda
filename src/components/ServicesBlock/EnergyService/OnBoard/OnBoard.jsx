@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import {
   consumersConfig,
@@ -15,8 +16,35 @@ import OptionsList from './OptionsList';
 import RoundButton from 'common/RoundButton';
 
 const OnBoard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleList = () => setIsOpen(prevIsOpen => !prevIsOpen);
+  const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
+  const [configList, setConfigList] = useState(consumersConfig);
+
+  // const onClick = e => {
+  //   let list = consumersConfig;
+  //   if (e.target.id === 1) list = consumersConfig;
+  //   if (e.target.id === 2) list = controlConfig;
+  //   if (e.target.id === 3) list = optionConfig;
+  //   if (e.target.id === 4) list = additionalConfig;
+
+  //   return setConfigList(list);
+  // };
+
+  const onClick = e => {
+    let list;
+    if (e.target.id === 1) {
+      list = consumersConfig;
+    } else if (e.target.id === 2) {
+      list = controlConfig;
+    } else if (e.target.id === 3) {
+      list = optionConfig;
+    } else {
+      list = additionalConfig;
+    }
+
+    console.log(e.target);
+
+    return setConfigList(list);
+  };
 
   return (
     <div className={s.blockWrapper}>
@@ -43,12 +71,18 @@ const OnBoard = () => {
         <h2 className={s.optionsTitle}>
           Параметры контролируемые системой установленной на судне:
         </h2>
-        <RoundButton onClick={toggleList} />
-        <RoundButton onClick={toggleList} />
+
+        <RoundButton onClick={onClick} id="1" />
+        <RoundButton onClick={onClick} id="2" />
+        <RoundButton onClick={onClick} id="3" />
+        <RoundButton onClick={onClick} id="4" />
+
         <div className={s.options}>
-          {isOpen && <OptionsList config={consumersConfig} />}
-          {isOpen && <OptionsList config={controlConfig} />}
+          {isDesktop && <OptionsList config={configList} />}
+          {/* <OptionsList config={additionalConfig} /> */}
         </div>
+
+        {!isDesktop && <OptionsList config={configList} />}
       </div>
 
       <SendInfo

@@ -2,6 +2,25 @@
   position: relative;
   display: flex;
   width: 375px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1440px) {
+  .main-container {
+    max-width: none;
+    width: 100%;
+  }
+
+  .main-wrapper {
+    position: relative;
+    width: 84.5%;
+  }
+}
+/* .main-container {
+  position: relative;
+  display: flex;
+  width: 375px;
 
   margin: 0 auto;
   overflow-x: hidden;
@@ -17,4 +36,4 @@
     position: relative;
     width: 84.5%;
   }
-}
+} */

@@ -1,0 +1,31 @@
+.taglineWrapper {
+  background: var(--bg-medium-color);
+  padding: 48px 16px;
+}
+
+.pagesBlock {
+  padding: 0 16px;
+  background-color: var(--bg-medium-color);
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1440px) {
+  .pageWrapper {
+    margin-top: 102px;
+    /* max-width: 1217px; */
+  }
+
+  .taglineWrapper {
+    /* padding: 96px 96px 0 96px; */
+    padding: 96px;
+  }
+
+  .pagesBlock {
+    padding-left: 96px;
+    padding-right: 96px;
+    /* padding: 96px 96px 96px 96px; */
+    align-items: flex-start;
+    text-align: left;
+  }
+}

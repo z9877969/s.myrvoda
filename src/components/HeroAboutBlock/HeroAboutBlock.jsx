@@ -15,7 +15,7 @@ const HeroAboutBlock = () => {
           прийти на помощь в трудную минуту. Наша команда специалистов готова к
           запросам любой сложности.
         </p>
-        {!isDesktop && <img src={cabinet} alt="cabinet" />}
+        {!isDesktop && <img className={s.img} src={cabinet} alt="cabinet" />}
 
         <a href="/" className={s.serviceLink}>
           Скачать нашу брошюру

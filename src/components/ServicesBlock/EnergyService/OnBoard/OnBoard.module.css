@@ -5,6 +5,7 @@
   color: rgb(217, 217, 217);
   align-items: center;
   gap: 24px;
+  height: 100%;
 }
 
 .hero {
@@ -70,7 +71,7 @@
 
 .options {
   width: 343px;
-  height: 367px;
+  min-height: 367px;
   background-repeat: no-repeat;
   background-image: url('../../../../images/energy-onboard-bg-mob.png');
 }
@@ -79,6 +80,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 60px;
 }
 
 .optionsTitle {
