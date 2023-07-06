@@ -48,7 +48,7 @@ const SparesBlock = ({ path, name }) => {
   // };
 
   const editData = (id, editedData) => {
-    api
+    return api
       .editItemApi({ endpoint: match.url, item: editedData, id })
       .then(data => {
         setSpares(p =>
