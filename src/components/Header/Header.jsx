@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import useOutsideClickDetector from 'hooks/useOutsideClickDetector';
 
-import BigButton from 'common/BigButton';
+import BrochureButton from 'common/BrochureButton';
 import Contacts from 'common/Contacts';
 import Sidebar from 'components/Sidebar';
 import { contactsConfig } from 'data/contacts';
@@ -16,14 +17,16 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => setIsOpen(prevIsOpen => !prevIsOpen);
 
+  const cardRef = useRef(null);
+  useOutsideClickDetector(cardRef, toggleSidebar, isOpen);
+
   useEffect(() => {
     if (isDesktop) setIsOpen(false);
-
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isDesktop, isOpen]);
 
   return (
-    <header className={s.mainHeader}>
+    <header ref={cardRef} className={s.mainHeader}>
       {isDesktop ? (
         <>
           <Contacts contactsConfig={contactsConfig} />
@@ -33,7 +36,7 @@ const Header = () => {
             <li>|</li>
             <li>EN</li>
           </ul>
-          <BigButton text="Скачать брошюру" isGray={true} />
+          <BrochureButton />
         </>
       ) : (
         <>
@@ -42,6 +45,7 @@ const Header = () => {
             <button type="button" className={s.menuBtn} onClick={toggleSidebar}>
               Меню <img src={isOpen ? burgerClose : burgerOpen} alt="list" />
             </button>
+
             <Sidebar isOpen={isOpen} />
           </div>
         </>

@@ -1,23 +1,45 @@
-import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
-import {
-  consumersConfig,
-  controlConfig,
-  optionConfig,
-  additionalConfig,
-} from 'data/energy-options';
-// import { energyOptionsConfig } from 'data/energy-options';
-
-import SendInfo from 'common/SendInfo';
-import quotes from 'images/quotes.svg';
-import s from './OnBoard.module.css';
 import OptionsList from './OptionsList';
 import RoundButton from 'common/RoundButton';
+import SendInfo from 'common/SendInfo';
+import { configs } from 'data/energy-options';
+import quotes from 'images/quotes.svg';
+import s from './OnBoard.module.css';
+import { useMediaQuery } from 'react-responsive';
+
+// import { energyOptionsConfig } from 'data/energy-options';
+
+// const buttonOptions = [
+//   {
+//     id: 'btn-1',
+//     cardTitle: 'Card name 1',
+//     cardList: [
+//       { id: 'item-1', text: 'Descr-1/1' },
+//       { id: 'item-2', text: 'Descr-1/2' },
+//       { id: 'item-3', text: 'Descr-1/3' },
+//     ],
+//   },
+//   {
+//     id: 'btn-2',
+//     cardTitle: 'Card name 2',
+//     cardList: [
+//       { id: 'item-1', text: 'Descr-2/1' },
+//       { id: 'item-2', text: 'Descr-2/2' },
+//       { id: 'item-3', text: 'Descr-2/3' },
+//     ],
+//   },
+// ];
 
 const OnBoard = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1440px)' });
-  const [configList, setConfigList] = useState(consumersConfig);
+  // const [configList, setConfigList] = useState(consumersConfig);
+  // console.log('configList', configList);
+  const [cardOptions, setCardOptions] = useState(configs.additional);
+
+  // useEffect(() => {
+  //   setConfigList(consumersConfig);
+  // }, []);
 
   // const onClick = e => {
   //   let list = consumersConfig;
@@ -29,21 +51,34 @@ const OnBoard = () => {
   //   return setConfigList(list);
   // };
 
-  const onClick = e => {
-    let list;
-    if (e.target.id === 1) {
-      list = consumersConfig;
-    } else if (e.target.id === 2) {
-      list = controlConfig;
-    } else if (e.target.id === 3) {
-      list = optionConfig;
-    } else {
-      list = additionalConfig;
-    }
+  // console.log('configList', consumersConfig);
 
-    console.log(e.target);
+  // const onClick = e => {
+  //   console.log(e.target.id);
+  //   let list = consumersConfig;
+  //   if (e.target.id === 1) {
+  //     list = consumersConfig;
+  //     // setConfigList(consumersConfig);
+  //   } else if (e.target.id === 2) {
+  //     list = controlConfig;
+  //     // setConfigList(controlConfig);
+  //   } else if (e.target.id === 3) {
+  //     list = optionConfig;
+  //     // setConfigList(optionConfig);
+  //   } else {
+  //     list = additionalConfig;
+  //     // setConfigList(additionalConfig);
+  //   }
+  //   console.log('list', list);
 
-    return setConfigList(list);
+  //   return setConfigList(list);
+  // };
+
+  const setConfig = configName => {
+    console.log('configName :>> ', configName);
+    console.log('configs :>> ', configs);
+    console.log('configs[configName] :>> ', configs[configName]);
+    setCardOptions(configs[configName]);
   };
 
   return (
@@ -72,17 +107,20 @@ const OnBoard = () => {
           Параметры контролируемые системой установленной на судне:
         </h2>
 
-        <RoundButton onClick={onClick} id="1" />
-        <RoundButton onClick={onClick} id="2" />
-        <RoundButton onClick={onClick} id="3" />
-        <RoundButton onClick={onClick} id="4" />
+        <RoundButton onClick={setConfig} configName="consumers" />
+        <RoundButton onClick={setConfig} configName="control" />
+        <RoundButton onClick={setConfig} configName="option" />
+        <RoundButton onClick={setConfig} configName="additional" />
+        {/* {buttonOptions.map(el => (
+          <RoundButton key={el.id} {...el} onClick={setCardOptions} />
+        ))} */}
 
         <div className={s.options}>
-          {isDesktop && <OptionsList config={configList} />}
+          {isDesktop && <OptionsList config={cardOptions} />}
           {/* <OptionsList config={additionalConfig} /> */}
         </div>
 
-        {!isDesktop && <OptionsList config={configList} />}
+        {!isDesktop && <OptionsList config={cardOptions} />}
       </div>
 
       <SendInfo

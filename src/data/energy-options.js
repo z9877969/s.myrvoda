@@ -45,11 +45,9 @@ const additionalConfig = {
   ],
 };
 
-// export const energyOptionsConfig = [
-//   consumersConfig,
-//   controlConfig,
-//   optionConfig,
-//   additionalConfig,
-// ];
-
-export { consumersConfig, controlConfig, optionConfig, additionalConfig };
+export const configs = {
+  consumers: consumersConfig,
+  control: controlConfig,
+  option: optionConfig,
+  additional: additionalConfig,
+};

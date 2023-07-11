@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
-import deleteIcon from 'images/delete.svg';
-import editIcon from 'images/edit.svg';
+import { useState, useRef } from 'react';
+
 import s from './CardWithMenu.module.css';
-import { useState } from 'react';
 
 const CardWithMenu = ({ text, onEdit, onDelete, isEditing }) => {
   const handleEdit = () => {
@@ -16,23 +15,24 @@ const CardWithMenu = ({ text, onEdit, onDelete, isEditing }) => {
   return (
     <div className={s.cardStyles}>
       <button
-        className={s.menuItem}
+        // className={isEditing ? { backgroundColor: 'green' } : {button}}
+        className={s.button}
         type="button"
         onClick={handleEdit}
         aria-label="Menu"
       >
-        <img src={editIcon} alt="Edit" />
-        <p style={isEditing ? {backgroundColor: "green"} : {}}>Edit</p>
+        {/* <p style={isEditing ? { backgroundColor: 'green' } : {}}>Edit</p> */}
+        {/* <img className={s.icon} src={editIcon} alt="Edit" /> */}
+        Edit
       </button>
 
       <button
-        className={s.menuItem}
+        className={s.button}
         type="button"
         onClick={handleDelete}
         aria-label="Menu"
       >
-        <img src={deleteIcon} alt="Delete" />
-        <p>Delete</p>
+        Delete
       </button>
     </div>
   );
