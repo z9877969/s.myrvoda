@@ -43,6 +43,7 @@ const getData = endpoint => {
 //   return fetchData(endpoint, finalOptions);
 // };
 const saveItem = (endpoint, item, options) => {
+  // const {itemTitle, imageUrl, } = item
   return axios
     .post(endpoint + '.json', item)
     .then(response => ({ ...item, id: response.data.name }));

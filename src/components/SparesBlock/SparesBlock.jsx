@@ -28,7 +28,7 @@ const SparesBlock = ({ path, name }) => {
   // ADD =======
 
   const confirmAdd = ({ itemTitle, imgUrl, brends }) => {
-    setActiveSpare({ itemTitle, imgUrl, brends });
+    setActiveSpare({ itemTitle, imgUrl });
   };
 
   useEffect(() => {
